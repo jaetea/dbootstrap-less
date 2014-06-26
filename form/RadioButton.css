@@ -1,0 +1,10 @@
+.dbootstrap .dijitRadio {
+  border-radius: 20px;
+}
+.dbootstrap .dijitRadio:before {
+  top: -20px;
+  left: -1px;
+}
+.dbootstrap .dijitRadio.dijitRadioChecked:before {
+  content: "\25CF";
+}

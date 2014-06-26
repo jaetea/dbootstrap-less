@@ -1,0 +1,25 @@
+//Radio Buttons
+
+.dbootstrap .dijitRadio {
+    &:extend(.dbootstrap .dijitCheckBox);
+    border-radius: 20px;
+}
+
+.dbootstrap .dijitRadio input {  
+
+    &:extend(.dbootstrap .dijitCheckBox input);
+}
+
+.dbootstrap .dijitRadioDisabled {
+    &:extend(.dbootstrap .dijitCheckBoxDisabled);
+}
+
+.dbootstrap .dijitRadio:before {
+	&:extend(.dbootstrap .dijitCheckBox:before );
+	top: -7px;
+  	left: 0;
+}
+
+.dbootstrap .dijitRadio.dijitRadioChecked:before{
+    content: "\25CF";
+}

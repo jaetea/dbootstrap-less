@@ -1,0 +1,100 @@
+// :copyright: Copyright 2013 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dgrid {
+    background-color: @table-bg;
+    border-color: @table-border-color;
+    border-width: 1px;
+    border-style: solid;
+	border-radius: @border-radius-base;
+    padding: 0px;
+}
+
+.dbootstrap .dgrid-header,
+.dbootstrap .dgrid-header-scroll {
+    &:extend(.h4); // Use .h4 font sizing and weight for titles
+	background-color: @panel-default-heading-bg;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid @table-border-color;
+	
+	.dgrid-sort-arrow {
+		color: @link-color; 	
+	}
+	
+	th.dgrid-cell {
+		font-weight: 500;
+	}
+}
+
+.dbootstrap .dgrid-footer {
+	background-color: @panel-default-heading-bg;
+}
+
+.dbootstrap .dgrid .dgrid-cell {
+    border-color: @table-border-color;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    overflow: hidden;
+}
+
+.dbootstrap .dgrid .dgrid-cell.dgrid-column-first {
+    border-width: 0px;
+}
+
+.dbootstrap .dgrid .dgrid-cell-padding {
+    padding: @table-cell-padding;
+}
+
+.dbootstrap .dgrid .dgrid-row {
+    border-color: @table-border-color;
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+.dbootstrap .dgrid .dgrid-row-even {
+    //background-color: #fff;
+}
+
+.dbootstrap .dgrid .dgrid-row-odd {
+    background-color: @table-bg-accent;
+}
+
+.dbootstrap .dgrid .dgrid-row:hover,
+.dbootstrap .dgrid .dgrid-row:hover .dgrid-cell {
+    background-color: @table-bg-hover;
+}
+
+// Selection
+.dbootstrap .dgrid-selected,
+.dbootstrap .dgrid-selected .dgrid-cell {
+    background-color: saturate(@table-bg-active, 10%);
+}
+
+// Icons
+.dbootstrap .dgrid-sort-arrow {
+    background: none;
+    width: auto;
+    height: auto;
+    margin: 0px;
+}
+
+.dbootstrap .dgrid-sort-arrow:before {
+	&:extend(.dijitIcon:before);
+	&:extend(.caret:before);
+}
+
+.dbootstrap .dgrid-sort-down .dgrid-sort-arrow:before {
+    &:extend(.caret);
+    content: "";
+}
+
+.dbootstrap .dgrid-sort-up .dgrid-sort-arrow:before {
+    &:extend(.caret);
+    border-top: 0;
+    border-bottom: @caret-width-base solid;
+    border-right: @caret-width-base solid transparent;	
+    border-left: @caret-width-base solid transparent;
+    content: "";
+}
+

@@ -1,0 +1,149 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+// Common styling
+//
+
+.dbootstrap .dijitButtonNode {
+    border: none;
+}
+
+.dbootstrap .dijitButtonNode * {
+    vertical-align: baseline;
+}
+
+.dbootstrap .dijitButtonNode .dijitIcon {
+    // Keeps button heights with and without icons the same
+    line-height: @line-height-base * 0.65;
+    vertical-align: middle;
+}
+
+// Default Style
+.dbootstrap .dijitButton .dijitButtonNode,
+.dbootstrap .dijitDropDownButton .dijitButtonNode,
+.dbootstrap .dijitComboButton .dijitButtonNode,
+.dbootstrap .dijitToggleButton .dijitButtonNode {
+    &:extend(.btn);
+    &:extend(.btn-default);
+}
+
+
+// Colours
+.dbootstrap .primary{
+   .dojo-button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+ }
+
+.dbootstrap .info{
+  .dojo-button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+ }
+
+.dbootstrap .success{
+  .dojo-button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+ }
+
+.dbootstrap .warning{
+  .dojo-button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+ }
+
+ .dbootstrap .danger{
+  .dojo-button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+ }
+
+.dbootstrap .inverse{
+   .dojo-button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+ }
+
+// Hover
+.dbootstrap .dijitButtonHover .dijitButtonNode,
+.dbootstrap .dijitDropDownButtonHover .dijitButtonNode,
+.dbootstrap .dijitComboButton .dijitButtonNodeHover,
+.dbootstrap .dijitComboButton .dijitDownArrowButtonHover,
+.dbootstrap .dijitToggleButtonHover .dijitButtonNode {
+    &:extend(.btn:hover);
+    &:extend(.btn-default:hover);
+}
+
+
+
+// Active - pressed
+.dbootstrap .dijitButtonActive .dijitButtonNode,
+.dbootstrap .dijitDropDownButtonActive .dijitButtonNode,
+.dbootstrap .dijitComboButtonActive .dijitButtonNodeHover,
+.dbootstrap .dijitToggleButtonActive .dijitButtonNode,
+.dbootstrap .dijitToggleButtonChecked .dijitButtonNode {
+    &:extend(.btn:active);
+    &:extend(.btn-default:active);
+}
+
+.dbootstrap .dijitDropDownButtonActive .dijitButtonNode {
+    &:extend(.dbootstrap .dijitDropDownButtonHover .dijitButtonNode);
+}
+
+
+// Disabled
+.dbootstrap .dijitDisabled{
+    cursor:not-allowed;
+}
+
+.dbootstrap .dijitButtonDisabled .dijitButtonNode,
+.dbootstrap .dijitDropDownButtonDisabled .dijitButtonNode,
+.dbootstrap .dijitComboButtonDisabled .dijitButtonNode,
+.dbootstrap .dijitToggleButtonDisabled .dijitButtonNode {
+    &:extend(.btn.disabled);
+}
+
+.dbootstrap .dijitToggleButtonDisabled.dijitToggleButtonChecked .dijitButtonNode {
+   &:extend(.btn-default:active);
+}
+
+// Content
+.dbootstrap .dijitButtonText {
+    padding: 0 0.3em;
+    text-align: center;
+}
+
+// Arrow
+.dbootstrap .dijitArrowButtonInner {
+    &:extend(.dbootstrap .dijitButtonNode .dijitIcon);
+    vertical-align: baseline;
+}
+
+.dbootstrap .dijitArrowButtonInner:before {
+    &:extend(.caret);
+	content: "";
+}
+
+.dbootstrap .dijitUpArrowButton .dijitArrowButtonInner:before {
+    &:extend(.caret);
+    border-top: 0;
+    border-bottom: @caret-width-base solid;
+    content: "";
+}
+
+// Specific Styling
+
+// Combo Box
+.dbootstrap .dijitComboButton td.dijitStretch,
+.dbootstrap .dijitComboButton td.dijitArrowButton {
+    display: table-cell;
+}
+
+.dbootstrap .dijitComboButton .dijitArrowButton {
+    border-left-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 0 @border-radius-base @border-radius-base 0;
+}
+
+.dbootstrap .dijitComboButton .dijitArrowButton.dijitHasDropDownOpen {
+    &:extend(.dbootstrap .dijitButtonActive .dijitButtonNode);
+}
+
+.dbootstrap .dijitComboButton .dijitStretch {
+    border-radius: @border-radius-base 0 0 @border-radius-base;
+}
+
+.dbootstrap table.dijitComboButton {
+    border-collapse: separate;
+}
+

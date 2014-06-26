@@ -1,0 +1,37 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dijitCheckBox {
+    border: 1px solid @input-border;
+    .box-shadow(inset 1px 1px 1px 0 rgba(1,1,1,.2));
+    text-align: center;
+    border-radius: 2px;
+    padding: 1px;
+    background-color: @input-bg;
+    position: relative;
+}
+
+.dbootstrap .dijitCheckBox input {
+    position: absolute;
+    top: 0;
+    left: 0;	
+    height: 100%;
+    width: 100%;
+}
+
+.dbootstrap .dijitCheckBox:before {
+    &:extend(.dijitIcon:before);
+    vertical-align: top;
+    position: relative;
+    top: -4px;
+    left: -1px;
+}
+
+.dbootstrap .dijitCheckBox.dijitCheckBoxChecked:before {
+    &:extend(.glyphicon-ok:before);
+}
+
+.dbootstrap .dijitCheckBoxDisabled {
+    .opacity(.65);
+    background-color: @input-bg-disabled;
+}

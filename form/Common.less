@@ -1,0 +1,99 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap fieldset {
+    &:extend(.dbootstrap .well);
+}
+
+.dbootstrap label {
+    vertical-align: middle;
+}
+
+// TextBox
+.dbootstrap .dijitTextBox {
+    display: inline-block;
+    font-size: @font-size-base;
+    color: @input-color;
+    border-radius: @input-border-radius;
+    background-color: @input-bg;
+    border: 1px solid @input-border;
+}
+
+.dbootstrap .dijitTextBoxFocused {
+    .form-control-focus();
+}
+
+.dbootstrap .dijitInputContainer {
+    padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+
+.dj_webkit .dbootstrap .dijitInputContainer {
+    padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+.dj_webkit .dbootstrap .dijitInputField .dijitInputInner {
+    height: @line-height-base;
+}
+
+.dj_webkit .dbootstrap .dijitInline .dijitInputField .dijitInputInner {
+    height: inherit;
+}
+
+.dbootstrap .dijitPlaceHolder {
+    padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+.dbootstrap .dijitTextBoxDisabled, .dbootstrap .dijitTextBoxReadOnly {
+    background-image: none;
+    box-shadow: none;
+    cursor: not-allowed;
+    background-color: @input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content
+}
+
+.dj_webkit .dbootstrap .dijitTextBoxDisabled input,
+.dj_webkit .dbootstrap textarea.dijitTextAreaDisabled,
+.dbootstrap .dijitTextBoxDisabled,
+.dbootstrap .dijitTextBoxReadOnly {
+    color: @btn-link-disabled-color;
+}
+
+// TextArea
+.dbootstrap .dijitTextArea {
+    padding: @padding-base-vertical @padding-base-horizontal;
+    line-height: @line-height-base;
+    box-sizing: border-box;
+}
+
+// ComboBox
+.dbootstrap .dijitComboBox .dijitButtonNode {
+    &:extend(.dbootstrap .dijitComboButton .dijitButtonNode);
+}
+
+.dbootstrap .dijitComboBox .dijitButtonNode.dijitArrowButton {
+    &:extend(.dbootstrap .dijitComboButton .dijitArrowButton);
+}
+
+.dbootstrap .dijitComboBox input.dijitArrowButtonInner {
+    display: none;
+}
+
+.dbootstrap .dijitComboBoxDisabled .dijitButtonNode {
+    &:extend(.dbootstrap .dijitComboButtonDisabled .dijitButtonNode);
+    background-color: @input-bg-disabled;
+}
+
+// Validation
+.dbootstrap .dijitTextBoxError {
+    color: @state-danger-text;
+    border-color: @state-danger-text;
+}
+
+.dbootstrap .dijitTextBoxError.dijitTextBoxFocused {
+    &:extend(.has-error .form-control:focus);
+}
+
+.dbootstrap .dijitValidationContainer {
+    display: none;
+}

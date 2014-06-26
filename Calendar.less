@@ -1,0 +1,90 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+.dbootstrap .dijitPopup .dijitCalendar {
+    margin-top: 2px;
+	.box-shadow(0 5px 10px rgba(0,0,0,.2));
+}
+
+.dbootstrap .dijitCalendar {
+    background-color: @gray-lighter;
+    border-collapse: separate;
+	border-radius: @border-radius-base;
+    border: 1px solid rgba(0,0,0,0.2);
+    text-align: center;
+    padding: @table-cell-padding;
+    font-size: @font-size-small;
+	th {
+		text-align: center;
+	}
+}
+
+.dbootstrap .dijitCalendarDateTemplate {
+    padding: 3px 7px;
+    background-color: #fff;
+}
+
+.dbootstrap .dijitCalendarDayLabelTemplate {
+    padding-bottom: @padding-small-vertical;
+    padding-top: @padding-small-vertical;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.dbootstrap .dijitCalendarDateLabel {
+    vertical-align: middle;
+}
+
+.dbootstrap .dijitCalendarPreviousMonth,
+.dbootstrap .dijitCalendarNextMonth {
+    background-color: #DFE8FF; //FIXME
+    color: @brand-primary;
+}
+
+.dbootstrap .dijitCalendarSelectedDate {
+    background-color: @brand-primary;
+    color: #fff;
+}
+
+.dbootstrap .dijitCalendarCurrentDate .dijitCalendarDateLabel {
+    text-decoration: underline;
+}
+
+.dbootstrap .dijitCalendarSelectedYear {
+    font-size: @font-size-large;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.dbootstrap .dijitCalendar tr td:first-child {
+    border-left: none;
+}
+
+.dbootstrap .dijitCalendarYearLabel {
+    margin-top: 8px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.dbootstrap .dijitCalendarIncrementControl:before {
+    &:extend(.dijitIcon:before);
+}
+
+.dbootstrap .dijitCalendarIncrease:before {
+    &:extend(.glyphicon-arrow-right:before);
+}
+
+.dbootstrap .dijitCalendarDecrease:before {
+    &:extend(.glyphicon-arrow-left:before);
+}
+
+.dbootstrap .dijitA11ySideArrow {
+    display: none;
+}
+
+.dbootstrap .dijitCalendarMonthMenu .dijitCalendarMonthLabel {
+    &:extend(.dbootstrap .dijitMenuItem);
+}
+
+.dbootstrap .dijitCalendarMonthMenu .dijitCalendarMonthLabelHover {
+    &:extend(.dbootstrap .dijitMenuItemHover);
+}
+

@@ -1,0 +1,157 @@
+// :copyright: Copyright 2012 Martin Pengelly-Phillips
+// :license: See LICENSE.txt.
+
+// Dialogs
+.dbootstrap .dijitDialog {
+    background-color: @modal-content-bg;
+    border: 1px solid @modal-content-border-color;
+    border-radius: @border-radius-large;
+    .box-shadow(0 3px 9px rgba(0,0,0,.5));
+}
+
+.dbootstrap .dijitDialogCloseIcon .closeText {
+    &:extend(.close);
+    display: inline;
+    position: relative;
+    .opacity(.8);	
+}
+
+.dbootstrap .dijitDialogCloseIconHover .closeText {
+    .opacity(.6);
+}
+
+.dbootstrap .dijitDialogUnderlay {
+    background-color: @modal-backdrop-bg;
+    .opacity(@modal-backdrop-opacity);
+}
+
+.dbootstrap .dijitDialogTitleBar {
+    &:extend(.modal-header);
+}
+
+.dbootstrap .dijitDialogTitle {
+    &:extend(.modal-title);
+    &:extend(h4); // Use H4 styling for modal headers
+}
+
+.dbootstrap .dijitDialogPaneContent {
+    &:extend(.modal-body);
+    // Remove focus outline from opened modal
+    outline: none;
+}
+.dbootstrap .dijitDialogPaneContentArea {
+    padding-bottom: @modal-inner-padding;
+
+    table td{
+        padding: @table-condensed-cell-padding; //FIX ME: Padding for form table inside tooltip dialog.
+     }
+}
+
+.dbootstrap .dijitDialogPaneActionBar {
+    &:extend(.modal-footer);
+    margin: -@modal-inner-padding; //Add negative margin to remove padding from .dijitDialogPaneContent
+	margin-top: 0px;
+}
+
+// Tooltips
+.dbootstrap .dijitTooltipContainer {
+  background-color: @tooltip-bg;
+  border-radius: @border-radius-base;
+  padding: 9px 14px;
+  color: @tooltip-color;
+  font-size: @font-size-small;
+
+  table td{
+    padding: @table-condensed-cell-padding; //FIX ME: Padding for form table inside tooltip dialog.
+  }
+}
+
+.dbootstrap .dijitTooltipConnector,
+.dbootstrap .dijitTooltipConnector:after {
+    &:extend(.tooltip-arrow);
+}
+
+
+.dbootstrap .dijitTooltipConnector:after {
+    content: "";
+    z-index: -1;
+}
+
+// Above
+.dbootstrap .dijitTooltipAbove {
+    padding-bottom: @tooltip-arrow-width;
+}
+
+.dbootstrap .dijitTooltipAbove .dijitTooltipConnector {
+    bottom: 1px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-top-color: @tooltip-arrow-color;
+    &:after {
+        border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+        border-top-color: @tooltip-arrow-color;
+        left: -(@tooltip-arrow-width);
+        bottom: -1px;
+    }
+}
+
+
+// Below
+.dbootstrap .dijitTooltipBelow {
+    padding-top: @tooltip-arrow-width;
+}
+
+.dbootstrap .dijitTooltipBelow .dijitTooltipConnector {
+    top: 1px;
+    border-width:0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+    &:after {
+        border-width:0 @tooltip-arrow-width @tooltip-arrow-width;
+        border-bottom-color: @tooltip-arrow-color;
+        left: -(@tooltip-arrow-width);
+        top: -1px;
+    }
+}
+
+// Left
+.dbootstrap .dijitTooltipLeft {
+    padding-right: @tooltip-arrow-width;
+}
+
+.dbootstrap .dijitTooltipLeft .dijitTooltipConnector {
+    right: 1px;
+    border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-left-color: @tooltip-arrow-color;
+    &:after {
+        border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+        border-left-color: @tooltip-arrow-color;
+        bottom: -(@tooltip-arrow-width);
+        right: -1px;
+    }
+}
+
+// Right
+.dbootstrap .dijitTooltipRight {
+    padding-left: @tooltip-arrow-width;
+}
+
+.dbootstrap .dijitTooltipRight .dijitTooltipConnector {
+    left: 1px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-right-color: @tooltip-arrow-color;
+    &:after {
+        border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+        border-right-color: @tooltip-arrow-color;
+        bottom: -(@tooltip-arrow-width);
+        left: -1px;
+    }
+}
+
+// Special
+.dbootstrap .dijitTooltipABLeft .dijitTooltipConnector {
+    left: 20px;
+}
+
+.dbootstrap .dijitTooltipABRight .dijitTooltipConnector {
+    right: 20px;
+}
+

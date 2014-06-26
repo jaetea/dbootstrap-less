@@ -1,0 +1,24 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+// Copied from BS3 mixins/buttons.less
+.dojo-button-variant(@color; @background; @border){
+    .dijitButtonNode {    
+       color: @color;
+  	   background-color: @background;
+  	   border-color: @border;
+    }
+    &.dijitButtonHover .dijitButtonNode, &.dijitDropDownButtonHover .dijitButtonNode,&.dijitComboButton .dijitButtonNodeHover,&.dijitComboButton .dijitDownArrowButtonHover, &.dijitToggleButtonHover .dijitButtonNode
+    {    
+    	color: @color;
+    	background-color: darken(@background, 10%);
+        	border-color: darken(@border, 12%);
+   	}
+    &.dijitButtonActive .dijitButtonNode, &.dijitDropDownButtonActive .dijitButtonNode, &.dijitComboButtonActive .dijitButtonNodeHover, &.dijitToggleButtonActive .dijitButtonNode, &.dijitToggleButtonChecked .dijitButtonNode
+    {    
+    	background-color: darken(@background, 10%);
+        	border-color: darken(@border, 12%);
+    	background-image: none;
+    }
+} 
